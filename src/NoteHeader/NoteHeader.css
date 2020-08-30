@@ -1,0 +1,22 @@
+.NoteHeader {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #000000;
+}
+
+.NoteHeader .top {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+}
+
+.NoteHeader .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NoteHeader button {
+  padding: 5px;
+}

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteHeader Component Renders default state 1`] = `
+<div
+  className="NoteHeader"
+>
+  <div
+    className="top"
+  >
+    <h2>
+      _
+    </h2>
+  </div>
+  <div
+    className="bottom"
+  >
+    <span>
+      Date modified on 
+      01-01-2020
+    </span>
+    <button
+      onClick={[Function]}
+    >
+      Delete Note
+    </button>
+  </div>
+</div>
+`;
+
+exports[`NoteHeader Component Renders state with NoteHeader name 1`] = `
+<div
+  className="NoteHeader"
+>
+  <div
+    className="top"
+  >
+    <h2>
+      Dogs
+    </h2>
+  </div>
+  <div
+    className="bottom"
+  >
+    <span>
+      Date modified on 
+      01-01-2020
+    </span>
+    <button
+      onClick={[Function]}
+    >
+      Delete Note
+    </button>
+  </div>
+</div>
+`;

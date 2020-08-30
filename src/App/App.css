@@ -1,0 +1,20 @@
+.App main {
+  display: flex;
+}
+.App .sidebar {
+  display: flex;
+  flex: 1;
+}
+.App .content {
+  display: flex;
+  flex: 2;
+}
+
+.button {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
