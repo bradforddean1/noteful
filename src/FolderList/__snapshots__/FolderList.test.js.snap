@@ -6,6 +6,7 @@ exports[`FolderList Component Renders list of folder with folders array passed i
 >
   <li
     className="folder"
+    key="b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1"
   >
     <NavLink
       to="/folder/b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1"
@@ -15,6 +16,7 @@ exports[`FolderList Component Renders list of folder with folders array passed i
   </li>
   <li
     className="folder"
+    key="b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1"
   >
     <NavLink
       to="/folder/b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1"
@@ -24,6 +26,7 @@ exports[`FolderList Component Renders list of folder with folders array passed i
   </li>
   <li
     className="folder"
+    key="b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1"
   >
     <NavLink
       to="/folder/b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1"
@@ -31,8 +34,11 @@ exports[`FolderList Component Renders list of folder with folders array passed i
       Spangley
     </NavLink>
   </li>
-  <button>
+  <Link
+    className="button"
+    to="/add-folder"
+  >
     Add Folder
-  </button>
+  </Link>
 </ul>
 `;

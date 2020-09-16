@@ -1,20 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import NoteList from "./NoteList";
-import { BrowserRouter } from "react-router-dom";
+import NoteSidebar from "./NoteSidebar";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
-describe("NoteList Component", () => {
+describe("NoteSidebar Component", () => {
   // Smoke test
   test("Renders", () => {
     const div = document.createElement("div");
-    ReactDOM.render(
-      <BrowserRouter>
-        <NoteList />
-      </BrowserRouter>,
-      div
-    );
+    ReactDOM.render(<NoteSidebar />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

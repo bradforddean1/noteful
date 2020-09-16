@@ -1,18 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import NoteList from "./NoteList";
-import { BrowserRouter } from "react-router-dom";
+import AddNote from "./AddNote";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
-describe("NoteList Component", () => {
+describe("AddNote Component", () => {
   // Smoke test
   test("Renders", () => {
     const div = document.createElement("div");
     ReactDOM.render(
-      <BrowserRouter>
-        <NoteList />
-      </BrowserRouter>,
+      <AddNote history={{ push: () => null }} handleSubmit={() => null} />,
       div
     );
     ReactDOM.unmountComponentAtNode(div);

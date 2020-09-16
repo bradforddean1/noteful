@@ -22,8 +22,9 @@ function NoteHeader(props) {
       <div className="bottom">
         <span>Date modified on {date}</span>
         <button
-          onClick={() => {
-            return;
+          onClick={(e) => {
+            e.preventDefault();
+            props.deleteNote(props.id);
           }}
         >
           Delete Note
@@ -36,11 +37,13 @@ function NoteHeader(props) {
 NoteHeader.propTypes = {
   name: PropTypes.string,
   modDateate: PropTypes.string,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  deleteNote: PropTypes.func.isRequired,
 };
 
 NoteHeader.defaultProps = {
   name: "_",
+  modDate: "",
 };
 
 export default NoteHeader;

@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
+import Store from "../Store.context";
 import { Link, NavLink } from "react-router-dom";
 import "./FolderList.css";
 
@@ -8,14 +8,17 @@ import "./FolderList.css";
  *@component
  */
 function FolderList(props) {
-  const folders = props.folders.map((folder) => {
+  const store = useContext(Store);
+
+  const folders = store.folders.map((folder) => {
     const linkPath = "/folder/".concat(folder.id);
     return (
-      <li className="folder">
+      <li key={folder.id} className="folder">
         <NavLink to={linkPath}>{folder.name}</NavLink>
       </li>
     );
   });
+
   return (
     <ul className="FolderList">
       {[folders]}
@@ -25,13 +28,5 @@ function FolderList(props) {
     </ul>
   );
 }
-
-FolderList.propTypes = {
-  folders: PropTypes.array,
-};
-
-FolderList.defaultProps = {
-  folders: [],
-};
 
 export default FolderList;

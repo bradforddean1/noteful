@@ -8,7 +8,11 @@ exports[`NoteHeader Component Renders default state 1`] = `
     className="top"
   >
     <h2>
-      _
+      <Link
+        to="/note/id"
+      >
+        _
+      </Link>
     </h2>
   </div>
   <div
@@ -16,7 +20,7 @@ exports[`NoteHeader Component Renders default state 1`] = `
   >
     <span>
       Date modified on 
-      01-01-2020
+      Invalid date
     </span>
     <button
       onClick={[Function]}
@@ -35,7 +39,11 @@ exports[`NoteHeader Component Renders state with NoteHeader name 1`] = `
     className="top"
   >
     <h2>
-      Dogs
+      <Link
+        to="/note/id"
+      >
+        Dogs
+      </Link>
     </h2>
   </div>
   <div

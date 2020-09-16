@@ -1,0 +1,26 @@
+.AddNote {
+  flex: 1;
+}
+
+.AddNote > form {
+  width: 100%;
+}
+
+.AddNote > form > * {
+  margin: 5px;
+}
+
+.AddNote > form > .form-group {
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.AddNote > form > .form-group > * {
+  width: 100%;
+}
+
+.AddNote input,
+.AddNote textarea {
+  border: 1px solid #000;
+  padding: 20px;
+}

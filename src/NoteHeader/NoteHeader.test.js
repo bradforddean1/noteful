@@ -8,18 +8,25 @@ describe("NoteHeader Component", () => {
   // Smoke test
   test("Renders", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<NoteHeader />, div);
+    ReactDOM.render(<NoteHeader id="id" deleteNote={() => null} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   // Snapshot tests
   test("Renders default state", () => {
-    const wrapper = shallow(<NoteHeader modDate="01/01/2020" />);
+    const wrapper = shallow(<NoteHeader id="id" deleteNote={() => null} />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
   test("Renders state with NoteHeader name", () => {
-    const wrapper = shallow(<NoteHeader modDate="01/01/2020" name="Dogs" />);
+    const wrapper = shallow(
+      <NoteHeader
+        id="id"
+        deleteNote={() => null}
+        modDate="01/01/2020"
+        name="Dogs"
+      />
+    );
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

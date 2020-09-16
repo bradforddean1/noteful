@@ -1,30 +1,52 @@
-import React from "react";
+import React, { useContext } from "react";
+import Store from "../Store.context";
+import PropTypes from "prop-types";
 import NoteHeader from "../NoteHeader/NoteHeader";
 import "./NotePage.css";
-import PropTypes from "prop-types";
 
 /**
  *
  *@component
  */
 function NotePage(props) {
+  const store = useContext(Store);
+
+  function getSelected(notes, noteId) {
+    if (!noteId) {
+      return [{}];
+    }
+
+    return notes.filter((note) => noteId === note.id);
+  }
+
+  const note = getSelected(store.notes, props.match.params.noteId)[0] || {};
+
   return (
     <>
       <div className="NotePage">
-        <NoteHeader modDate={props.modDate} name={props.name} id={props.id} />
+        <NoteHeader
+          modDate={note.modDate}
+          name={note.name}
+          id={note.id}
+          deleteNote={(id) => {
+            store.deleteNote(id);
+            props.history.push("/");
+          }}
+        />
       </div>
-      <p>{props.content}</p>
+      <p>{note.content}</p>
     </>
   );
 }
 
-NotePage.propTypes = {
-  /**
-   * Example prop
-   */
-  example: PropTypes.string.isRequired,
+NotePage.defaultProps = {
+  match: { params: { folderId: "" } },
 };
 
-NotePage.defaultProps = {};
+NotePage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({ folderId: PropTypes.string }),
+  }),
+};
 
 export default NotePage;

@@ -1,0 +1,21 @@
+.AddFolder {
+  flex: 1;
+}
+
+.AddFolder > form {
+  width: 100%;
+}
+
+.AddFolder > form > * {
+  margin: 5px;
+}
+
+.AddFolder > form > .form-group > * {
+  width: 100%;
+}
+
+.AddFolder input,
+.AddFolder textarea {
+  border: 1px solid #000;
+  padding: 20px;
+}

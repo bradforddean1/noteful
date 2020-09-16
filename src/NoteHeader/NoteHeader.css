@@ -7,7 +7,7 @@
 
 .NoteHeader .top {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: center;
 }
 
