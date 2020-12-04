@@ -4,21 +4,21 @@ import PropTypes from "prop-types";
 
 /**
  *
- *@component
+ * @component
  */
 function ValidationError(props) {
-  if (props.message) {
-    return <div className="ValidationError">{props.message}</div>;
-  }
+	if (props.message) {
+		return <div className="ValidationError">{props.message}</div>;
+	}
 
-  return <></>;
+	return <></>;
 }
 
 ValidationError.propTypes = {
-  /**
-   * Error message
-   */
-  message: PropTypes.string,
+	/**
+	 * Error message
+	 */
+	message: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 export default ValidationError;

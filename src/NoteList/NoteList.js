@@ -6,7 +6,6 @@ import "./NoteList.css";
 import { Link } from "react-router-dom";
 
 /**
- *
  *@component
  */
 function NoteList(props) {
@@ -49,6 +48,7 @@ NoteList.defaultProps = {
   match: { params: { folderId: "" } },
 };
 
+
 NoteList.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({ folderId: PropTypes.string }),
@@ -56,3 +56,4 @@ NoteList.propTypes = {
 };
 
 export default NoteList;
+
